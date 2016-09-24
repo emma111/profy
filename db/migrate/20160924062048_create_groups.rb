@@ -1,5 +1,9 @@
-class AddGroupIdToUsers < ActiveRecord::Migration
+class CreateGroups < ActiveRecord::Migration
   def change
-    add_column :users, :group_id, :integer
+    create_table :groups do |t|
+      t.string :key, unique: true
+      t.text :detail
+      t.timestamps null: false
+    end
   end
 end
