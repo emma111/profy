@@ -10,3 +10,5 @@ class User < ActiveRecord::Base
 
   #association
   belongs_to :group
+
+end
