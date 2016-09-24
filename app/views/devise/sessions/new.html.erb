@@ -12,7 +12,9 @@
         <div>
           <%= f.email_field :email, autofocus: true, placeholder: 'メールアドレス', class: 'input form-control' %>
         </div>
-
+        <div>
+          <%= f.password_field :password, autocomplete: 'off', placeholder: 'パスワード', class: 'input form-control' %>
+        </div><br />
         <div>
           <br>
         <div class='form-group'>
