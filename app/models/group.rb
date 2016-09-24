@@ -1,2 +1,4 @@
 class Group < ActiveRecord::Base
-end
+
+  #association
+  has_many :users
