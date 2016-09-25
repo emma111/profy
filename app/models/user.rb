@@ -22,6 +22,11 @@ class User < ActiveRecord::Base
     "#{family_name_kana} #{first_name_kana}"
   end
 
+  def full_profile?
+    avatar? && family_name? && first_name? && family_name_kana? && first_name_kana?
+    # 姓名、姓名カナ、画像が設定されていないとfalseを返す。カラム名 + ? と書くと、指定したカラムに値が存在しないときにfalseを返すというActiverecordの機能を利用
+  end
+
   private
   def has_group_key?
     group_key.present?
